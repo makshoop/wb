@@ -1,11 +1,658 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./adaptive.css">
+    <title>Товары и точка</title>
 </head>
-<body>
-    
+
+<body class="page">
+    <header class="header">
+        <div class="header-container">
+        <div class="header-nav-element">
+            <button class="header-burger" type="button"></button>
+            <div class="header-logo"></div>
+        </div>
+        <div class="header-search">
+            <form class="header-search-form" name="search-form" novalidate>
+            <input class='header-search-input' type='text' name='search-input' placeholder="Я ищу..." required
+                autocomplete="off" id="search-input">
+            <button class="header-search-btn" type='submit' aria-label='Поиск'></button>
+            </form>
+        </div>
+        <button class="header-search-btn header-search-btn-mobile" type='submit' aria-label='Поиск'></button>
+        <nav class="header-navbar">
+            <ul class="header-navbar-list">
+            <li class="header-navbar-item">
+                <a class="header-navbar-link" href="#">
+                <img class="header-navbar-img header-navbar-img-profile" src="./images/profile.svg" alt="Профиль">
+                Профиль
+                </a>
+            </li>
+
+            <li class="header-navbar-item">
+                <a class="header-navbar-link" href="#">
+                <img class="header-navbar-img header-navbar-img-cart" src="./images/basket.svg" alt="Корзина">
+                Корзина
+                </a>
+            </li>
+            </ul>
+        </nav>
+        </div>
+        <div class="header-rounding"></div>
+    </header>
+
+    <main class="main">
+        <div class="content">
+        <section class="cart-content">
+            <h1 class="cart-title">Корзина</h1>
+            <div class="cart-list">
+            <div class="cart-list-header">
+                <label for="all-available-checkbox" class="form-label">
+                <input type="checkbox" name="all-available-checkbox" id="all-available-checkbox" class="form-item"
+                    value="all-available">
+                <span class="form-pseudo-item form-pseudo-item-list"></span>
+                <span class="form-label-text cart-checkbox">Выбрать все</span>
+                </label>
+                <div class="cart-list-header-items hidden">
+                <p class="cart-list-header-number">266 товаров ·</p>
+                <p class="cart-list-header-price">&nbsp2 100 569 сом</p>
+                </div>
+                <img class="cart-list-icon" src="./images/accordion.svg" alt="accordion">
+            </div>
+
+            <div class="cart-list-zone">
+                <div class="cart-item">
+                <div class="cart-item-info">
+                    <label for="item-checkbox" class="form-label cart-item-checkbox">
+                    <input type="checkbox" name="item-checkbox" id="item-checkbox" class="form-item"
+                        value="item-checkbox">
+                    <span class="form-pseudo-item"></span>
+                    </label>
+                    <p class="cart-item-size-mobile">56</p>
+                    <img class="cart-item-photo" src="./images/Frame 3853.jpg" alt="img">
+                    <div class="cart-item-details">
+                    <div class="cart-item-prices cart-item-prices-mobile">
+                        <p class="cart-item-final-price">522<span class="small"> сом</span></p>
+                        <p class="cart-item-price">1051 сом</p>
+                    </div>
+                    <p class="cart-item-name">Футболка UZcotton мужская</p>
+                    <div class="cart-item-details-line">
+                        <p class="cart-item-detail">Цвет: белый</p>
+                        <p class="cart-item-size">Размер: 56</p>
+                    </div>
+                    <p class="cart-item-detail cart-item-detail-grey">Коледино WB</p>
+                    <div class="cart-item-shop-info">
+                        <p class="cart-item-detail cart-item-detail-grey">ООО Вайлдберриз</p>
+                        <img class="cart-info-icon" src="./images/info.svg" alt="info">
+                        <div class="tooltip tooltip-shop-info">
+                        <p class="tooltip-title">OOO «ВАЙЛДБЕРРИЗ»</p>
+                        <p class="tooltip-text">ОГРН: 1067746062449</p>
+                        <p class="tooltip-text">142181, Московская область, г.о. Подольск, д Коледино, тер.
+                            Индустриальный Парк Коледино, д.
+                            6, стр. 1</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="cart-item-info-price">
+                    <div class="cart-item-controls">
+                    <div class="cart-item-counter-left">
+                        <div class="cart-item-counter">
+                        <button class="counter-minus">−</button>
+                        <input class="counter-number" type="number" minlength="1" maxlength="2" value="1"
+                            autocomplete="off">
+                        <button class="counter-plus">+</button>
+                        </div>
+                        <p class="cart-item-left">Осталось 2 шт.</p>
+                    </div>
+
+                    <div class="cart-item-btns">
+                        <button class="cart-btn-like" type='button' aria-label='Лайк'></button>
+                        <button class="cart-btn-delete" type='button' aria-label='Корзина'></button>
+                    </div>
+                    </div>
+                    <div class="cart-item-prices">
+                    <p class="cart-item-final-price">522<span class="small"> сом</span></p>
+                    <p class="cart-item-price">1051 сом</p>
+                    <div class="tooltip tooltip-price-info">
+                        <div class="tooltip-sale">
+                        <p class="tooltip-text tooltip-text-sale-name">Скидка 55%</p>
+                        <p class="tooltip-text">−300 сом</p>
+                        </div>
+                        <div class="tooltip-sale">
+                        <p class="tooltip-text tooltip-text-sale-name">Скидка покупателя 10%</p>
+                        <p class="tooltip-text">−30 сом</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="cart-item">
+                <div class="cart-item-info">
+                    <label for="item-checkbox2" class="form-label cart-item-checkbox">
+                    <input type="checkbox" name="item-checkbox2" id="item-checkbox2" class="form-item"
+                        value="item-checkbox">
+                    <span class="form-pseudo-item form-pseudo-item-list"></span>
+                    </label>
+                    <img class="cart-item-photo" src="./images/Frame 277132129.jpg" alt="img">
+                    <div class="cart-item-details">
+                    <div class="cart-item-prices cart-item-prices-mobile">
+                        <p class="cart-item-final-price"><span class="small">2100047 сом</span></p>
+                        <p class="cart-item-price">2300047 сом</p>
+                    </div>
+                    <p class="cart-item-name">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер
+                        на Apple
+                        iPhone XR, MobiSafe</p>
+                    <div class="cart-item-details-line">
+                        <p class="cart-item-detail">Цвет: прозрачный</p>
+                        <p class="cart-item-detail"> </p>
+                    </div>
+                    <p class="cart-item-detail cart-item-detail-grey">Коледино WB</p>
+                    <div class="cart-item-shop-info">
+                        <p class="cart-item-detail cart-item-detail-grey">ООО Мегапрофстиль</p>
+                        <img class="cart-info-icon" src="./images/info.svg" alt="info">
+                        <div class="tooltip tooltip-shop-info">
+                        <p class="tooltip-title">OOO «МЕГАПРОФСТИЛЬ»</p>
+                        <p class="tooltip-text">ОГРН: 5167746237148</p>
+                        <p class="tooltip-text">129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2,
+                            офис 34</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="cart-item-info-price">
+                    <div class="cart-item-controls">
+                    <div class="cart-item-counter-left">
+                        <div class="cart-item-counter">
+                        <button class="counter-minus">−</button>
+                        <input class="counter-number" type="number" value="200" autocomplete="off">
+                        <button class="counter-plus">+</button>
+                        </div>
+                    </div>
+                    <div class="cart-item-btns">
+                        <button class="cart-btn-like" type='button' aria-label='Лайк'></button>
+                        <button class="cart-btn-delete" type='button' aria-label='Корзина'></button>
+                    </div>
+                    </div>
+                    <div class="cart-item-prices">
+                    <p class="cart-item-final-price"><span class="small">2 100 047 сом</span></p>
+                    <p class="cart-item-price">2 300 047 сом</p>
+                    <div class="tooltip tooltip-price-info">
+                        <div class="tooltip-sale">
+                        <p class="tooltip-text tooltip-text-sale-name">Скидка 55%</p>
+                        <p class="tooltip-text">−300 сом</p>
+                        </div>
+                        <div class="tooltip-sale">
+                        <p class="tooltip-text tooltip-text-sale-name">Скидка покупателя 10%</p>
+                        <p class="tooltip-text">−30 сом</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="cart-item">
+                <div class="cart-item-info">
+                    <label for="item-checkbox3" class="form-label cart-item-checkbox">
+                    <input type="checkbox" name="item-checkbox3" id="item-checkbox3" class="form-item"
+                        value="item-checkbox">
+                    <span class="form-pseudo-item form-pseudo-item-list"></span>
+                    </label>
+                    <img class="cart-item-photo" src="./images/Frame 277132129 (1).jpg" alt="img">
+                    <div class="cart-item-details">
+                    <div class="cart-item-prices cart-item-prices-mobile">
+                        <p class="cart-item-final-price">494<span class="small"> сом</span></p>
+                        <p class="cart-item-price">950 сом</p>
+                    </div>
+                    <p class="cart-item-name">Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные,
+                        шестигранные,<br>Faber-Castell</p>
+                    <p class="cart-item-detail cart-item-detail-grey">Коледино WB</p>
+                    <div class="cart-item-shop-info">
+                        <p class="cart-item-detail cart-item-detail-grey">ООО Вайлдберриз</p>
+                        <img class="cart-info-icon" src="./images/info.svg" alt="info">
+                        <div class="tooltip tooltip-shop-info">
+                        <p class="tooltip-title">OOO «ВАЙЛДБЕРРИЗ»</p>
+                        <p class="tooltip-text">ОГРН: 1067746062449</p>
+                        <p class="tooltip-text">142181, Московская область, г.о. Подольск, д Коледино, тер.
+                            Индустриальный Парк Коледино, д.
+                            6, стр. 1</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="cart-item-info-price">
+                    <div class="cart-item-controls">
+                    <div class="cart-item-counter-left">
+                        <div class="cart-item-counter">
+                        <button class="counter-minus">−</button>
+                        <input class="counter-number" type="number" minlength="1" maxlength="2" value="1"
+                            autocomplete="off">
+                        <button class="counter-plus">+</button>
+                        </div>
+                        <p class="cart-item-left">Осталось 2 шт.</p>
+                    </div>
+                    <div class="cart-item-btns">
+                        <button class="cart-btn-like" type='button' aria-label='Лайк'></button>
+                        <button class="cart-btn-delete" type='button' aria-label='Корзина'></button>
+                    </div>
+                    </div>
+                    <div class="cart-item-prices">
+                    <p class="cart-item-final-price">494<span class="small"> сом</span></p>
+                    <p class="cart-item-price">950 сом</p>
+                    <div class="tooltip tooltip-price-info">
+                        <div class="tooltip-sale">
+                        <p class="tooltip-text tooltip-text-sale-name">Скидка 55%</p>
+                        <p class="tooltip-text">−300 сом</p>
+                        </div>
+                        <div class="tooltip-sale">
+                        <p class="tooltip-text tooltip-text-sale-name">Скидка покупателя 10%</p>
+                        <p class="tooltip-text">−30 сом</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="cart-missing-list">
+            <div class="cart-missing-header">
+                <p class="cart-missing-text">Отсутствуют · 3 товара</p>
+                <img class="cart-list-icon cart-list-icon-missing" src="./images/accordion.svg" alt="accordion">
+            </div>
+
+            <div class="cart-list-zone cart-list-zone-missing">
+                <div class="cart-item">
+                <div class="cart-item-info">
+                    <p class="cart-item-size-mobile">56</p>
+                    <img class="cart-item-photo cart-item-photo-missing" src="./images/Frame 3853.jpg" alt="img">
+                    <div class="cart-item-details">
+                    <p class="cart-item-name">Футболка UZcotton мужская</p>
+                    <div class="cart-item-details-line">
+                        <p class="cart-item-detail">Цвет: белый</p>
+                        <p class="cart-item-size">Размер: 56</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="cart-item-info-price">
+                    <div class="cart-item-btns cart-item-btns-missing">
+                    <button class="cart-btn-like" type='button' aria-label='Лайк'></button>
+                    <button class="cart-btn-delete" type='button' aria-label='Корзина'></button>
+                    </div>
+                    <div class="cart-item-prices"></div>
+                </div>
+                </div>
+
+                <div class="cart-item">
+                <div class="cart-item-info">
+                    <img class="cart-item-photo cart-item-photo-missing" src="./images/Frame 277132129.jpg" alt="img">
+                    <div class="cart-item-details">
+                    <p class="cart-item-name">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер
+                        на Apple
+                        iPhone XR, MobiSafe</p>
+                    <div class="cart-item-details-line">
+                        <p class="cart-item-detail">Цвет: прозрачный</p>
+                        <p class="cart-item-size"> </p>
+                    </div>
+                    </div>
+                </div>
+                <div class="cart-item-info-price">
+                    <div class="cart-item-btns cart-item-btns-missing">
+                    <button class="cart-btn-like" type='button' aria-label='Лайк'></button>
+                    <button class="cart-btn-delete" type='button' aria-label='Корзина'></button>
+                    </div>
+                    <div class="cart-item-prices"></div>
+                </div>
+                </div>
+                <div class="cart-item">
+                <div class="cart-item-info">
+                    <img class="cart-item-photo cart-item-photo-missing" src="./images/Frame 277132129 (1).jpg"
+                    alt="img">
+                    <div class="cart-item-details">
+                    <p class="cart-item-name">Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные,
+                        шестигранные, Faber-Castell</p>
+                    </div>
+                </div>
+                <div class="cart-item-info-price">
+                    <div class="cart-item-btns cart-item-btns-missing">
+                    <button class="cart-btn-like" type='button' aria-label='Лайк'></button>
+                    <button class="cart-btn-delete" type='button' aria-label='Корзина'></button>
+                    </div>
+                    <div class="cart-item-prices"></div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="cart-form cart-form-delivery">
+            <div class="cart-form-header">
+                <h2 class="cart-form-name">Способ доставки</h2>
+                <button class="cart-form-btn cart-form-btn-delivery" type="button">Изменить</button>
+            </div>
+            <div class="cart-form-info">
+                <div class="cart-form-info-item">
+                <p class="cart-form-info-title">Пункт выдачи</p>
+                <div class="cart-form-info-value">
+                    <p class="cart-form-address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                    <div class="cart-form-about-shop">
+                    <div class="cart-form-rating">
+                        <img class="cart-form-icon-star" src="./images/Stars.svg" alt="Рейтинг">
+                        <p class="cart-form-info-text">4.99</p>
+                    </div>
+                    <p class="cart-form-info-text">Ежедневно с 10 до 21</p>
+                    </div>
+                </div>
+                </div>
+                <div class="cart-form-info-item">
+                <p class="cart-form-info-title">Стоимость доставки</p>
+                <p class="cart-form-info-value">Бесплатно</p>
+                </div>
+                <div class="cart-form-info-item">
+                <p class="cart-form-info-title">5—6 февраля</p>
+                <div class="cart-form-delivery-photos">
+                    <img class="cart-form-delivery-photo" src="./images/Frame 3853.jpg" alt="img">
+                    <img class="cart-form-delivery-photo" src="./images/Frame 277132129.jpg" alt="img">
+                    <img class="cart-form-delivery-photo" src="./images/Frame 277132129 (1).jpg" alt="img">
+                </div>
+                </div>
+                <div class="cart-form-info-item">
+                <p class="cart-form-info-title">7—8 февраля</p>
+                <div class="cart-form-delivery-photos">
+                    <img class="cart-form-delivery-photo" src="./images/Frame 277132129.jpg" alt="img">
+                </div>
+                </div>
+
+
+                <div class="cart-form-delivery-price">
+                <img class="sidebar-info-tick-price" src="./images/shipping.svg" alt="Галочка зеленая">
+                <p class="cart-info-text">Обратная доставка товаров на склад при отказе —&nbsp
+                    <span class="sidebar-info-text-mobile">бесплатно</span>
+                </p>
+                <span class="sidebar-info-text cart-info-text-free"> бесплатно</span>
+                <div class="tooltip tooltip-free-delivery">
+                    <p class="tooltip-text">Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно</p>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="cart-form cart-form-payment">
+            <div class="cart-form-header">
+                <h2 class="cart-form-name">Способ оплаты</h2>
+                <button class="cart-form-btn cart-form-btn-payment" type="button">Изменить</button>
+            </div>
+            <div class="cart-card">
+                <img class="sidebar-info-payment-img" src="./images/mirlogo.svg" alt="MIR">
+                <p class="cart-form-card">1234 56•• •••• 1234</p>
+                <p class="cart-form-card">01/30</p>
+            </div>
+            <p class="sidebar-info-text cart-form-card-text">Спишем оплату с карты при получении</p>
+            </div>
+
+            <div class="cart-form cart-form-user" id="form-user">
+            <div class="cart-form-header">
+                <h2 class="cart-form-name">Получатель</h2>
+            </div>
+            <form class="cart-form-user">
+                <div class="cart-form-field-line">
+                <label class="cart-form-field">
+                    <input class="cart-form-input" type="text" name="name" required autocomplete="off" id="name-input">
+                    <span class="cart-form-label">Имя</span>
+                    <span class="cart-form-input-error name-input-error"></span>
+                </label>
+
+                <label class="cart-form-field">
+                    <input class="cart-form-input" type="text" name="surname" required autocomplete="off"
+                    id="surname-input">
+                    <span class="cart-form-label">Фамилия</span>
+                    <span class="cart-form-input-error surname-input-error"></span>
+                </label>
+                </div>
+
+                <div class="cart-form-field-line">
+                <label class="cart-form-field">
+                    <input class="cart-form-input" type="text" name="email" required autocomplete="off" id="email-input">
+                    <span class="cart-form-label">Почта</span>
+                    <span class="cart-form-input-error email-input-error"></span>
+                </label>
+
+                <label class="cart-form-field">
+                    <input class="cart-form-input" type="text" name="tel" required autocomplete="off" id="phone-input"
+                    maxlength="30">
+                    <span class="cart-form-label">Телефон</span>
+                    <span class="cart-form-input-error phone-input-error"></span>
+                </label>
+
+                <label class="cart-form-field">
+                    <input class="cart-form-input" type='text' name="tin" required autocomplete="off" id="tin-input"
+                    maxlength="14">
+                    <span class="cart-form-label">ИНН</span>
+                    <span class="cart-form-label-tin">Для таможенного оформления</span>
+                    <span class="cart-form-input-error tin-input-error"></span>
+                </label>
+                </div>
+            </form>
+            </div>
+        </section>
+
+        <section class="sidebar">
+            <div class="sidebar-info">
+            <div class="sidebar-total">
+                <p class="sidebar-total-text">Итого</p>
+                <p class="sidebar-total-text">2 101 063 <span class="sidebar-total-text-currency">сом</span></p>
+            </div>
+            <div class="sidebar-details">
+                <p class="sidebar-details-text">203 товара</p>
+                <p class="sidebar-details-text">2 302 048 сом</p>
+            </div>
+            <div class="sidebar-details">
+                <p class="sidebar-details-text">Скидка</p>
+                <p class="sidebar-details-text">−200 985 сом</p>
+            </div>
+            <div class="sidebar-details">
+                <p class="sidebar-details-text">Доставка</p>
+                <p class="sidebar-details-text">Бесплатно</p>
+            </div>
+            </div>
+
+            <div class="sidebar-info">
+            <div class="sidebar-info-header-zone">
+                <p class="sidebar-info-title">Доставка в пункт выдачи</p>
+                <button class="sidebar-info-edit-btn sidebar-info-edit-btn-delivery"></button>
+            </div>
+            <p class="sidebar-info-address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+            <p class="sidebar-info-date">5−8 фев</p>
+
+            <div class="sidebar-info-price-zone">
+                <img class="sidebar-info-tick-price" src="./images/shipping.svg" alt="Галочка зеленая">
+                <p class="sidebar-info-text">Обратная доставка товаров на склад при отказе — <span
+                    class="sidebar-info-text sidebar-info-text-free">бесплатно</span></p>
+                <div class="tooltip tooltip-sidebar-free-delivery">
+                <p class="tooltip-text">Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно</p>
+                </div>
+            </div>
+            </div>
+
+            <div class="sidebar-info">
+            <div class="sidebar-info-header-zone">
+                <p class="sidebar-info-title">Оплата картой</p>
+                <button class="sidebar-info-edit-btn sidebar-info-edit-btn-payment"></button>
+            </div>
+            <div class="sidebar-card">
+                <img class="sidebar-info-payment-img" src="./images/mirlogo.svg" alt="MIR">
+                <p class="sidebar-info-text">1234 12•• •••• 1234</p>
+            </div>
+            <div class="sidebar-info-payment-zone">
+                <label for="payment-checkbox" class="form-label">
+                <input type="checkbox" name="payment-checkbox" id="payment-checkbox" class="form-item" value="payment">
+                <span class="form-pseudo-item"></span>
+                <span class="form-label-text">Списать оплату сразу</span>
+                </label>
+                <p class="sidebar-info-text sidebar-info-text-payment">Спишем оплату с карты при получении</p>
+            </div>
+            </div>
+
+            <div class="sidebar-info">
+            <button class="sidebar-btn-order">Заказать</button>
+            <div class="sidebar-btn-rules">
+                <img class="sidebar-info-tick" src="./images/tick.svg" alt="Галочка">
+                <p class="sidebar-info-text sidebar-info-text-sogl">Соглашаюсь с правилами пользования торговой площадкой
+                и возврата
+                </p>
+            </div>
+            </div>
+        </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-rounding"></div>
+        <div class="footer-container">
+        <p class="footer-text">© 2022 ООО «Товары и точка»</p>
+        </div>
+    </footer>
+
+    <div class="modal modal-payment">
+        <div class="modal-container modal-container-payment">
+        <button class="modal-btn-exit"></button>
+        <div class="modal-content">
+            <p class="modal-title">Способ оплаты</p>
+            <div class="form-radio">
+            <input id="mir" type="radio" name="radio" value="1" checked>
+            <label class="modal-payment-label" for="mir">
+                <img class="modal-payment-logo" src="./images/mirlogo.svg" alt="MIR">
+                <p class="modal-payment-number">1234 56•• •••• 1234</p>
+            </label>
+            </div>
+
+            <div class="form-radio">
+            <input id="visa" type="radio" name="radio" value="2">
+            <label class="modal-payment-label" for="visa">
+                <img class="modal-payment-logo" src="./images/visa.svg" alt="MIR">
+                <p class="modal-payment-number">1234 56•• •••• 1234</p>
+            </div>
+
+            <div class="form-radio">
+            <input id="mastercard" type="radio" name="radio" value="3">
+            <label class="modal-payment-label" for="mastercard">
+                <img class="modal-payment-logo" src="./images/mastercard.svg" alt="MIR">
+                <p class="modal-payment-number">1234 56•• •••• 1234</p>
+            </div>
+
+            <div class="form-radio">
+            <input id="maestro" type="radio" name="radio" value="4">
+            <label class="modal-payment-label" for="maestro">
+                <img class="modal-payment-logo" src="./images/maestro.svg" alt="MIR">
+                <p class="modal-payment-number">1234 56•• •••• 1234</p>
+            </div>
+        </div>
+
+        <button class="modal-btn">Выбрать</button>
+        </div>
+    </div>
+
+    <div class="modal modal-delivery">
+        <div class="modal-container modal-container-delivery">
+        <button class="modal-btn-exit"></button>
+        <div class="modal-content">
+            <p class="modal-title">Способ доставки</p>
+            <div class="modal-delivery-types-btns">
+            <button class="modal-delivery-btn modal-delivery-btn-shop">В пункт выдачи</button>
+            <button class="modal-delivery-btn modal-delivery-btn-courier">Курьером</button>
+            </div>
+
+            <div class="modal-delivery-addresses modal-delivery-addresses-courier">
+            <p class="modal-delivery-addresses-title">Мои адреса</p>
+            <div class="modal-form-radio">
+                <input id="mir" type="radio" name="radio" value="1" checked>
+                <label class="modal-address-label" for="mir">
+                <p class="modal-form-address">Бишкек, улица Табышалиева, 57</p>
+                <button class="modal-btn-delete" type='button' aria-label='Корзина'></button>
+                </label>
+            </div>
+
+            <div class="modal-form-radio">
+                <input id="mir" type="radio" name="radio" value="1" checked>
+                <label class="modal-address-label" for="mir">
+                <p class="modal-form-address">Бишкек, улица Жукеева-Пудовкина, 77/1</p>
+                <button class="modal-btn-delete" type='button' aria-label='Корзина'></button>
+                </label>
+            </div>
+
+            <div class="modal-form-radio">
+                <input id="mir" type="radio" name="radio" value="1" checked>
+                <label class="modal-address-label" for="mir">
+                <p class="modal-form-address">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</p>
+                <button class="modal-btn-delete" type='button' aria-label='Корзина'></button>
+                </label>
+            </div>
+            </div>
+
+            <div class="modal-delivery-addresses modal-delivery-addresses-shop">
+            <p class="modal-delivery-addresses-title">Мои адреса</p>
+            <div class="modal-form-radio">
+                <input id="mir" type="radio" name="radio" value="1" checked>
+                <label class="modal-address-label" for="mir">
+                <div class="cart-form-info-value">
+                    <p class="modal-form-address">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+                    <div class="cart-form-about-shop">
+                    <div class="cart-form-rating">
+                        <img class="cart-form-icon-star" src="./images/Stars.svg" alt="Рейтинг">
+                    </div>
+                    <p class="cart-form-info-text">Пункт выдачи</p>
+                    </div>
+                </div>
+
+                <button class="modal-btn-delete" type='button' aria-label='Корзина'></button>
+                </label>
+            </div>
+
+            <div class="modal-form-radio">
+                <input id="visa" type="radio" name="radio" value="2">
+                <label class="modal-address-label" for="visa">
+                <div class="cart-form-info-value">
+                    <p class="modal-form-address">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+                    <div class="cart-form-about-shop">
+                    <div class="cart-form-rating">
+                        <img class="cart-form-icon-star" src="./images/Stars.svg" alt="Рейтинг">
+                        <p class="cart-form-info-text">4.99</p>
+                    </div>
+                    <p class="cart-form-info-text">Пункт выдачи</p>
+                    </div>
+                </div><button class="modal-btn-delete" type='button' aria-label='Корзина'></button>
+                </label>
+            </div>
+
+            <div class="modal-form-radio">
+                <input id="mastercard" type="radio" name="radio" value="3">
+                <label class="modal-address-label" for="mastercard">
+                <div class="cart-form-info-value">
+                    <p class="modal-form-address">г. Бишкек, улица Табышалиева, д. 57</p>
+                    <div class="cart-form-about-shop">
+                    <div class="cart-form-rating">
+                        <img class="cart-form-icon-star" src="./images/Stars.svg" alt="Рейтинг">
+                        <p class="cart-form-info-text">4.99</p>
+                    </div>
+                    <p class="cart-form-info-text">Пункт выдачи</p>
+                    </div>
+                </div>
+                <button class="modal-btn-delete" type='button' aria-label='Корзина'></button>
+                </label>
+            </div>
+            </div>
+
+            <button class="modal-btn modal-btn-delivery">Выбрать</button>
+        </div>
+        </div>
+    </div>
+
+    <script src="./components/accordion.js" type="text/javascript"></script>
+    <script src="./components/modals.js" type="text/javascript"></script>
+    <script src="./components/validator.js" type="text/javascript"></script>
 </body>
+
 </html>
